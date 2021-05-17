@@ -29,6 +29,7 @@ namespace Reforestacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblmuni = new System.Windows.Forms.Label();
             this.txtmuni = new System.Windows.Forms.TextBox();
             this.lblarbol = new System.Windows.Forms.Label();
@@ -48,6 +49,11 @@ namespace Reforestacion
             this.txtid = new System.Windows.Forms.TextBox();
             this.btnac = new System.Windows.Forms.Button();
             this.btnborrar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtdonar = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,22 +107,24 @@ namespace Reforestacion
             // 
             // btnconsul
             // 
-            this.btnconsul.Location = new System.Drawing.Point(260, 124);
+            this.btnconsul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnconsul.Location = new System.Drawing.Point(260, 69);
             this.btnconsul.Name = "btnconsul";
             this.btnconsul.Size = new System.Drawing.Size(75, 23);
             this.btnconsul.TabIndex = 6;
             this.btnconsul.Text = "Consultar";
-            this.btnconsul.UseVisualStyleBackColor = true;
+            this.btnconsul.UseVisualStyleBackColor = false;
             this.btnconsul.Click += new System.EventHandler(this.btnconsul_Click);
             // 
             // btnactu
             // 
-            this.btnactu.Location = new System.Drawing.Point(260, 188);
+            this.btnactu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnactu.Location = new System.Drawing.Point(260, 124);
             this.btnactu.Name = "btnactu";
             this.btnactu.Size = new System.Drawing.Size(75, 23);
             this.btnactu.TabIndex = 7;
             this.btnactu.Text = "Agregar";
-            this.btnactu.UseVisualStyleBackColor = true;
+            this.btnactu.UseVisualStyleBackColor = false;
             this.btnactu.Click += new System.EventHandler(this.btnactu_Click);
             // 
             // dataGridView1
@@ -132,7 +140,7 @@ namespace Reforestacion
             this.dataGridView1.Location = new System.Drawing.Point(351, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(424, 234);
+            this.dataGridView1.Size = new System.Drawing.Size(443, 234);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -166,7 +174,7 @@ namespace Reforestacion
             // 
             // txtbusca
             // 
-            this.txtbusca.Location = new System.Drawing.Point(461, 26);
+            this.txtbusca.Location = new System.Drawing.Point(455, 26);
             this.txtbusca.Name = "txtbusca";
             this.txtbusca.Size = new System.Drawing.Size(155, 20);
             this.txtbusca.TabIndex = 10;
@@ -175,11 +183,11 @@ namespace Reforestacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(368, 29);
+            this.label1.Location = new System.Drawing.Point(347, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Buscar municipio";
+            this.label1.Text = "Buscar por municipio:";
             // 
             // lblid
             // 
@@ -199,29 +207,80 @@ namespace Reforestacion
             // 
             // btnac
             // 
-            this.btnac.Location = new System.Drawing.Point(260, 245);
+            this.btnac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnac.Location = new System.Drawing.Point(260, 183);
             this.btnac.Name = "btnac";
             this.btnac.Size = new System.Drawing.Size(75, 23);
             this.btnac.TabIndex = 14;
             this.btnac.Text = "Actualizar";
-            this.btnac.UseVisualStyleBackColor = true;
+            this.btnac.UseVisualStyleBackColor = false;
             this.btnac.Click += new System.EventHandler(this.btnac_Click);
             // 
             // btnborrar
             // 
-            this.btnborrar.Location = new System.Drawing.Point(260, 297);
+            this.btnborrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnborrar.Location = new System.Drawing.Point(260, 241);
             this.btnborrar.Name = "btnborrar";
             this.btnborrar.Size = new System.Drawing.Size(75, 23);
             this.btnborrar.TabIndex = 15;
             this.btnborrar.Text = "Borrar";
-            this.btnborrar.UseVisualStyleBackColor = true;
+            this.btnborrar.UseVisualStyleBackColor = false;
             this.btnborrar.Click += new System.EventHandler(this.btnborrar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.Location = new System.Drawing.Point(224, 370);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Donar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 373);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Arboles a donar";
+            // 
+            // txtdonar
+            // 
+            this.txtdonar.Location = new System.Drawing.Point(103, 370);
+            this.txtdonar.Name = "txtdonar";
+            this.txtdonar.Size = new System.Drawing.Size(100, 20);
+            this.txtdonar.TabIndex = 18;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(710, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 19;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(623, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Buscar por arbol:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(820, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtdonar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnborrar);
             this.Controls.Add(this.btnac);
             this.Controls.Add(this.txtid);
@@ -237,8 +296,9 @@ namespace Reforestacion
             this.Controls.Add(this.lblarbol);
             this.Controls.Add(this.txtmuni);
             this.Controls.Add(this.lblmuni);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Control de donación";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,6 +326,11 @@ namespace Reforestacion
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Button btnac;
         private System.Windows.Forms.Button btnborrar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtdonar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
 
